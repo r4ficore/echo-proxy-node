@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECHO://PROXY SIGNAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-bg: #000000;
+            --accent: #00FF9C;
+            --text-color: #E0E0E0;
+            --muted: #999999;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        h1 {
+            color: var(--accent);
+            font-size: 1.3em;
+            margin-bottom: 1em;
+        }
+
+        .log {
+            font-size: 0.9em;
+            color: var(--muted);
+            margin: 0.7em 0;
+            word-wrap: break-word;
+        }
+
+        .button {
+            background-color: var(--accent);
+            color: var(--main-bg);
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 2em;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #00d97d;
+        }
+
+        .glitch {
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; transform: translate(0.5px, -0.5px); }
+            100% { opacity: 1; transform: none; }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .button {
+                font-size: 0.95em;
+                padding: 10px 16px;
+            }
+
+            .log {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen" style="
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: black;
+        color: #00FF9C;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        z-index: 10000;">
+        SCANNING SIGNAL...
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.getElementById("loading-screen").style.display = "none";
+            }, 2000);
+        });
+    </script>
+
+    <div class="container">
+        <h1 class="glitch">"If you're already here, the trace has been confirmed."</h1>
+
+        <div class="log">[LOG 004B] signal_deviation::auth_pending</div>
+        <div class="log">[SYS ECHO] memory shadow active...</div>
+        <div class="log">[INTERRUPT] observer pattern reinitialized</div>
+
+        <div style="margin-top: 3em;"><a href="https://chatgpt.com/g/g-67fbd48c98848191ae0a0243079f3724-blackprompt-summoner-v1-0?prompt=ECHO%3A%2F%2FPROXY" target="_blank" rel="noopener noreferrer" class="button">
+            INITIATE // ACCESS NODE
+        </a></div>
+    </div>
+</body>
+</html>
